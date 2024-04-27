@@ -1,0 +1,31 @@
+{
+  "name": "React + Tailwind Chrome Extension Template",
+  "manifest_version": 3,
+  "version": "0.0.0",
+  "description": "",
+  "icons": {
+    "128": "assets/logo.png"
+  },
+  "background": {
+    "service_worker": "./background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "./content.js"
+      ]
+    }
+  ],
+  "permissions": [
+
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
